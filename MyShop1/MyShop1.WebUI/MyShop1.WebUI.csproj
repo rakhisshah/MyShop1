@@ -25,6 +25,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -191,6 +192,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\ProductManagerController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -257,6 +259,10 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\ProductManager\Index.cshtml" />
+    <Content Include="Views\ProductManager\Create.cshtml" />
+    <Content Include="Views\ProductManager\Edit.cshtml" />
+    <Content Include="Views\ProductManager\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -275,6 +281,24 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MyShop1.core\MyShop1.core.csproj">
+      <Project>{eb691a05-436f-44f5-90a6-8b1c35427020}</Project>
+      <Name>MyShop1.core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyShop1.Data.Access.SQL\MyShop1.Data.Access.SQL.csproj">
+      <Project>{8e990e46-3c55-4380-a527-318e6e85354a}</Project>
+      <Name>MyShop1.Data.Access.SQL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyShop1.DataAccess.InMemory\MyShop1.DataAccess.InMemory.csproj">
+      <Project>{30a775f0-4204-4f04-ad65-dbdcd0caa03a}</Project>
+      <Name>MyShop1.DataAccess.InMemory</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyShop1.services\MyShop1.services.csproj">
+      <Project>{d03d7830-2902-40c4-84a3-b6e09a3c5fd0}</Project>
+      <Name>MyShop1.services</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
